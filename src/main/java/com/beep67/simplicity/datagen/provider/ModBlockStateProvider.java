@@ -1,0 +1,44 @@
+package com.beep67.simplicity.datagen.provider;
+
+import com.beep67.simplicity.block.BlockInit;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import static com.beep67.simplicity.Simplicity.MODID;
+
+public class ModBlockStateProvider extends BlockStateProvider {
+
+
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, MODID, exFileHelper);
+    }
+
+    @Override
+    protected void registerStatesAndModels() {
+        cubeAllModBlock(BlockInit.PINK_SALT_ROCK.get());
+        cubeAllModBlock(BlockInit.PINK_SALT_DUST_BLOCK.get());
+        cubeAllModBlock(BlockInit.POLISHED_PINK_SALT_ROCK.get());
+        cubeAllModBlock(BlockInit.POLISHED_PINK_SALT_ROCK_BRICKS.get());
+        cubeAllModBlock(BlockInit.CHISELED_POLISHED_PINK_SALT_ROCK.get());
+        cubeAllModBlock(BlockInit.POLISHED_PINK_SALT_ROCK_TILES.get());
+        cubeAllModBlock(BlockInit.WEATHERED_POLISHED_PINK_SALT_ROCK_TILES.get());
+        cubeAllModBlock(BlockInit.CRACKED_POLISHED_PINK_SALT_ROCK_BRICKS.get());
+        cubeAllModBlock(BlockInit.CRACKED_POLISHED_PINK_SALT_ROCK_TILES.get());
+
+
+    }
+
+    private void cubeAllModBlock(Block block) {
+        ResourceLocation loc = ForgeRegistries.BLOCKS.getKey(block);
+        String path = loc.getPath();
+        simpleBlock(block, models().cubeAll(path, new ResourceLocation(loc.getNamespace(), "block/" +path)));
+        itemModels().withExistingParent(path, new ResourceLocation(loc.getNamespace(), "block/" + path));
+    }
+
+
+
+}
