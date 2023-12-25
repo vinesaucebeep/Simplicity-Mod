@@ -21,5 +21,6 @@ public class ItemInit {
     public static final RegistryObject<Item> CRACKED_POLISHED_PINK_SALT_ROCK_BRICKS_ITEM = ITEMS.register("cracked_polished_pink_salt_rock_bricks", () -> new BlockItem(BlockInit.CRACKED_POLISHED_PINK_SALT_ROCK_BRICKS.get(), new Item.Properties()));
     public static final RegistryObject<Item> WEATHERED_POLISHED_PINK_SALT_ROCK_TILES = ITEMS.register("weathered_polished_pink_salt_rock_tiles", () -> new BlockItem(BlockInit.WEATHERED_POLISHED_PINK_SALT_ROCK_TILES.get(), new Item.Properties()));
     public static final RegistryObject<Item> CRACKED_POLISHED_PINK_SALT_ROCK_TILES = ITEMS.register("cracked_polished_pink_salt_rock_tiles", () -> new BlockItem(BlockInit.CRACKED_POLISHED_PINK_SALT_ROCK_TILES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> POLISHED_PINK_SALT_ROCK_PILAR_ITEM = ITEMS.register("polished_pink_salt_rock_pillar", () -> new BlockItem(BlockInit.POLISHED_PINK_SALT_ROCK_PILLAR.get(), new Item.Properties()));
 
 }
