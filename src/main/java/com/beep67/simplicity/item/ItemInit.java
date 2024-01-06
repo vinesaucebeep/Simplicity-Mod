@@ -1,6 +1,7 @@
-package com.beep67.simplicity.block;
+package com.beep67.simplicity.item;
 
 import com.beep67.simplicity.Simplicity;
+import com.beep67.simplicity.block.BlockInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
